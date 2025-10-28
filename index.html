@@ -3,131 +3,777 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[suresh]</title>
-    <link rel="icon" href="S2.jpeg" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Suresh - Portfolio</title>
+    <link rel="icon" href="S2.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
-        
-    html, body {
-        margin: 0px;
-        padding: 0px;
-        height: 100%;
-        width: 100%;
-        background: linear-gradient(skyblue, black);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        color: rgb(255, 255, 255);
-    }
-    
-        .one{
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
             width: 100%;
-            background-image: url(S2.jpeg);
-            display: flex;
-            justify-content:space-between;
-
+            background: linear-gradient(skyblue, black);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: rgb(255, 255, 255);
+            scroll-behavior: smooth;
         }
-        .two{
+        
+        .one {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
             position: sticky;
-            top: 0px;
-            display:flex;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .two {
+            display: flex;
             justify-content: space-around;
             width: 500px;
-            margin:10px;
-            
-        
         }
-        img{
-            width:50px;
+        
+        img {
+            width: 50px;
             border-radius: 25px;
         }
-        .n{
+        
+        .n {
             color: aliceblue;
-            background:linear-gradient(skyblue,black);
+            background: linear-gradient(skyblue, black);
             border-radius: 10px 0px;
             text-decoration: none;
             text-align: center;
             width: 100px;
             border: 3px solid darkblue;
+            padding: 8px 5px;
+            transition: all 0.3s ease;
         }
-        ul li{
+        
+        .n:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        ul li {
             text-transform: capitalize;
-
         }
-
-        a:link{
+        
+        a:link {
             color: #17dbe2;
         }
-        a:visited{
-            color:red;
+        
+        a:visited {
+            color: red;
         }
+        
         a:active {
-             color: green;
+            color: green;
         }
-
-        a:hover{
-            color:white;
+        
+        a:hover {
+            color: white;
         }
-
-
-        a{
+        
+        a {
             font-size: 20px;
             text-decoration: none;
         }
-        @media screen and (max-width:320px) {
-            .two{
-
-                font-size:small;
-                width: 150px;
-                height: 30px;
-            
-            
-
-            }
-
-            
+        
+        fieldset {
+            border: 2px solid #17dbe2;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
         }
+        
+        legend {
+            color: #17dbe2;
+            padding: 0 10px;
+        }
+        
+        h1 {
+            color: #17dbe2;
+        }
+        
+        /* Resume Section Styles */
+        .resume-section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 1000px;
+            transition: transform 0.3s ease;
+            border: 2px solid #17dbe2;
+        }
+        
+        .resume-section:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-header h2 {
+            color: #e7edf3;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            color: #e2eff0;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .resume-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .resume-preview {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .preview-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: all 0.3s ease;
+            max-width: 100%;
+        }
+        
+        .preview-container:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .preview-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .preview-container:hover img {
+            transform: scale(1.03);
+        }
+        
+        .preview-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .preview-container:hover .preview-overlay {
+            opacity: 1;
+        }
+        
+        .preview-overlay button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .preview-overlay button:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .resume-preview p {
+            margin-top: 20px;
+            color: #e2eff0;
+            font-style: italic;
+        }
+        
+        .download-options {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .download-options h3 {
+            color: #e7edf3;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .download-options h3:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+        
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #e7edf3;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .download-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .download-btn:hover:before {
+            left: 100%;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .btn-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .btn-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover .btn-icon {
+            transform: scale(1.1);
+        }
+        
+        .btn-text {
+            font-size: 1.1rem;
+        }
+        
+        .btn-arrow {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .download-btn:hover .btn-arrow {
+            transform: translateX(5px);
+        }
+        
+        .additional-info {
+            margin-top: 40px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }
+        
+        .additional-info h4 {
+            color: #e7edf3;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .additional-info h4 i {
+            color: #3498db;
+        }
+        
+        .additional-info p {
+            color: #e2eff0;
+        }
+        
+        .file-size {
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-top: 5px;
+        }
+        
+        /* Improved Modal styles */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            position: relative;
+            max-width: 95%;
+            max-height: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-image {
+            max-width: 100%;
+            max-height: 95vh;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid white;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            z-index: 1001;
+        }
+        
+        .close-modal:hover {
+            background: rgba(231, 76, 60, 0.8);
+            transform: scale(1.1);
+        }
+        
+        .modal-controls {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1001;
+        }
+        
+        .modal-controls button {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-controls button:hover {
+            background: rgba(52, 152, 219, 0.8);
+            transform: translateY(-3px);
+        }
+        
+        /* Contact section */
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        .contact-icons a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-icons a:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-icons i {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .two {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .resume-content {
+                flex-direction: column;
+            }
+            
+            .download-buttons {
+                width: 100%;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .resume-section {
+                padding: 30px 20px;
+            }
+            
+            .one {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .modal-content {
+                max-width: 98%;
+                max-height: 98%;
+            }
+            
+            .close-modal {
+                top: 10px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .download-btn {
+                padding: 15px 20px;
+            }
+            
+            .btn-text {
+                font-size: 1rem;
+            }
+            
+            .n {
+                width: 80px;
+                font-size: 16px;
+            }
+            
+            .contact-icons {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .modal-controls {
+                bottom: 15px;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        .modal-image {
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    min-width: 800px; /* Force minimum size */
+}
     </style>
 </head>
 <body>
     <div class="one">
-    <img src="S2.jpeg" alt="s">
-    <div class="two">  
-    <a href="#a" class="n">about</a>
-    <a href="#s" class="n">skills</a>
-    <a href="#d" class="n">details</a>
+        <img src="S2.jpeg" alt="Profile Picture">
+        <div class="two">  
+            <a href="#a" class="n">About</a>
+            <a href="#s" class="n">Skills</a>
+            <a href="#d" class="n">Details</a>
+            <a href="#resume" class="n">Resume</a>
+        </div>
     </div>
-    </div>
+    
     <div id="a">
         <fieldset>
-        <legend><h1>about</h1></legend>
-        <p><b><i>My name is Suresh, and I am currently pursuing my Bachelor of Computer Applications (BCA) in my 3rd year. I have a keen interest in technology, programming, and software development. I am enthusiastic about learning new skills and exploring the IT field to build a successful career.
-
-       </i></b></p>
+            <legend><h1>About</h1></legend>
+            <p><b><i>My name is Suresh, and I am currently pursuing my Bachelor of Computer Applications (BCA) in my 3rd year. I have a keen interest in technology, programming, and software development. I am enthusiastic about learning new skills and exploring the IT field to build a successful career.</i></b></p>
+        </fieldset>
     </div>
+    
     <div id="s">
         <fieldset>
-            <legend><h1>skills</h1></legend>
-<ul style="list-style-type: square;font-size: 25px;">
-    <li>python</li>
-    <li>html</li>
-    <li>css</li>
-</ul>
-        
+            <legend><h1>Skills</h1></legend>
+            <ul style="list-style-type: square; font-size: 25px;">
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </fieldset>
     </div>
+    
     <div id="d">
         <fieldset>
-            <legend><h1>details</h1></legend>
-        <p>My name is Suresh, and I am currently pursuing my Bachelor of Computer Applications (BCA) in my 3rd year. I have a strong interest in technology and software development. Throughout my studies, I have developed a solid foundation in programming, web development, and computer fundamentals. I am eager to expand my skills and gain practical experience in the IT field. I am passionate about continuous learning and look forward to building a successful career in the tech industry.</p>
+            <legend><h1>Details</h1></legend>
+            <p>My name is Suresh, and I am currently pursuing my Bachelor of Computer Applications (BCA) in my 3rd year. I have a strong interest in technology and software development. Throughout my studies, I have developed a solid foundation in programming, web development, and computer fundamentals. I am eager to expand my skills and gain practical experience in the IT field. I am passionate about continuous learning and look forward to building a successful career in the tech industry.</p>
+        </fieldset>
     </div>
-    </fieldset>
+    
     <hr>
+    
+    <fieldset id="resume">
+        <legend><h1>Resume</h1></legend>
+        <section class="resume-section">
+            <div class="section-header">
+                <h2>My Resume</h2>
+                <p>View and download my professional resume in high-quality format</p>
+            </div>
+            
+            <div class="resume-content">
+                <div class="resume-preview">
+                    <div class="preview-container">
+                        <!-- Replace with your actual resume image path -->
+                        <img src="suresh.jpeg" alt="Resume Preview" id="resumePreview">
+                        <div class="preview-overlay">
+                            <button id="viewResumeBtn">
+                                <i class="fas fa-expand"></i> View Full Size
+                            </button>
+                        </div>
+                    </div>
+                    <p>Click on the preview to view full size image</p>
+                </div>
+                
+                <div class="download-options">
+                    <h3>Download Options</h3>
+                    <div class="download-buttons">
+                        <!-- Update href with your actual file path -->
+                        <a href="suresh.jpeg" class="download-btn" id="downloadBtn" download="suresh-resume.jpg">
+                            <div class="btn-content">
+                                <div class="btn-icon">
+                                    <i class="fas fa-file-image"></i>
+                                </div>
+                                <div>
+                                    <div class="btn-text">Download Resume Image</div>
+                                    <div class="file-size">High Quality • JPG Format</div>
+                                </div>
+                            </div>
+                            <div class="btn-arrow">
+                                <i class="fas fa-arrow-down"></i>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="additional-info">
+                        <h4><i class="fas fa-info-circle"></i> Download Instructions</h4>
+                        <p>Click the download button to save the resume image to your device. For best results, we recommend viewing the full-size preview first.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Modal for full-size image view -->
+        <div id="imageModal" class="image-modal">
+            <div class="modal-content">
+                <img id="modalImage" class="modal-image" src="suresh.jpeg" alt="Full Size Resume">
+                <button id="closeModal" class="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-controls">
+                    <button id="zoomInBtn">
+                        <i class="fas fa-search-plus"></i> Zoom In
+                    </button>
+                    <button id="zoomOutBtn">
+                        <i class="fas fa-search-minus"></i> Zoom Out
+                    </button>
+                    <button id="resetZoomBtn">
+                        <i class="fas fa-sync-alt"></i> Reset Zoom
+                    </button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <hr>
+    
     <center>
-    <h1>contact info</h1>
-    <i class="fa-brands fa-square-instagram" style="color: #17dbe2;"></i><a href="https://www.instagram.com/_vip.suresh_06/profilecard/?igsh=bWhuZ3ZvOHAxM3Ji" target="_blank">insta</a><br>
-    <i class="fa-brands fa-linkedin" style="color:#17dbe2;"></i><a href="https://www.linkedin.com/in/s-suresh-6911782a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin</a><br>
-    <i class="fa-brands fa-square-github" style="color: #17dbe2;"></i><a href="https://github.com/developer2123-suresh" target="_blank">GitHub</a>
+        <h1>Contact Info</h1>
+        <div class="contact-icons">
+            <a href="https://www.instagram.com/_vip.suresh_06/profilecard/?igsh=bWhuZ3ZvOHAxM3Ji" target="_blank">
+                <i class="fa-brands fa-square-instagram" style="color: #17dbe2;"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com/in/s-suresh-6911782a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <i class="fa-brands fa-linkedin" style="color:#17dbe2;"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/developer2123-suresh" target="_blank">
+                <i class="fa-brands fa-square-github" style="color: #17dbe2;"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
     </center>
-<hr>
+    
+    <hr>
+
+    <script>
+        // Get elements
+        const viewResumeBtn = document.getElementById('viewResumeBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const imageModal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = document.getElementById('closeModal');
+        const zoomInBtn = document.getElementById('zoomInBtn');
+        const zoomOutBtn = document.getElementById('zoomOutBtn');
+        const resetZoomBtn = document.getElementById('resetZoomBtn');
+        const resumePreview = document.getElementById('resumePreview');
+        
+        // Replace with your actual resume image path
+        const resumeImageUrl = 'suresh.jpeg';
+        
+        // Set image source for modal - use the same image as preview
+        modalImage.src = resumeImageUrl;
+        
+        // Zoom functionality
+        let currentScale = 1;
+        const zoomStep = 0.2;
+        const maxScale = 3;
+        const minScale = 0.5;
+        
+        function updateZoom() {
+            modalImage.style.transform = `scale(${currentScale})`;
+        }
+        
+        // View full size image
+        viewResumeBtn.addEventListener('click', function() {
+            imageModal.style.display = 'flex';
+            currentScale = 1; // Reset zoom when opening
+            updateZoom();
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+        
+        // Close modal
+        closeModal.addEventListener('click', function() {
+            imageModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        });
+        
+        // Close modal when clicking outside the image
+        imageModal.addEventListener('click', function(e) {
+            if (e.target === imageModal) {
+                imageModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Zoom in
+        zoomInBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (currentScale < maxScale) {
+                currentScale += zoomStep;
+                updateZoom();
+            }
+        });
+        
+        // Zoom out
+        zoomOutBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (currentScale > minScale) {
+                currentScale -= zoomStep;
+                updateZoom();
+            }
+        });
+        
+        // Reset zoom
+        resetZoomBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            currentScale = 1;
+            updateZoom();
+        });
+        
+        // Also allow clicking on the preview image itself to open modal
+        resumePreview.addEventListener('click', function() {
+            imageModal.style.display = 'flex';
+            currentScale = 1;
+            updateZoom();
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && imageModal.style.display === 'flex') {
+                imageModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>    
 </body>
 </html>
